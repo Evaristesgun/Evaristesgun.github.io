@@ -1,26 +1,245 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Evariste's Homepage</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evariste | Mathematics Notes</title>
+
+    <style>
+        :root {
+            --bg: #f5f5f5;
+            --text: #1a1a1a;
+            --muted: #666;
+            --border: #d0d0d0;
+            --link: #1f4ea3;
+            --card: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: "Georgia", "Times New Roman", serif;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+
+        header {
+            margin-bottom: 56px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.4rem;
+            font-weight: normal;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        nav {
+            margin-top: 24px;
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--link);
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 52px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 18px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+            font-weight: normal;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-bottom: 18px;
+        }
+
+        .project-title {
+            font-size: 1.15rem;
+            margin-bottom: 6px;
+        }
+
+        .project-title a {
+            color: var(--link);
+            text-decoration: none;
+        }
+
+        .project-title a:hover {
+            text-decoration: underline;
+        }
+
+        .project-description {
+            color: var(--muted);
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        footer {
+            margin-top: 72px;
+            color: var(--muted);
+            font-size: 0.95rem;
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+        }
+
+        code {
+            background: #ececec;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.92rem;
+        }
+
+        @media (max-width: 700px) {
+            h1 {
+                font-size: 2.1rem;
+            }
+
+            .container {
+                padding: 32px 18px 60px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <h1>Evariste</h1>
+    <div class="container">
 
-    <p>Welcome to my homepage.</p>
+        <header>
+            <h1>Evariste</h1>
 
-    <ul>
-        <li>
-            <a href="https://evaristesgun.github.io/Math.Notes.et.Problems/LinearAlgebra/main.pdf">
-                Linear Algebra Notes
-            </a>
-        </li>
+            <div class="subtitle">
+                Mathematics Notes, Expositions, and Independent Study.
+            </div>
 
-        <li>
-            <a href="https://evaristesgun.github.io/Math.Notes.et.Problems/ExPair/main.pdf">
-                ExPair
-            </a>
-        </li>
-    </ul>
+            <nav>
+                <a href="#notes">Notes</a>
+                <a href="#projects">Projects</a>
+                <a href="#reading">Reading</a>
+                <a href="#links">Links</a>
+            </nav>
+        </header>
+
+        <section id="about">
+            <h2>About</h2>
+
+            <p>
+                This website collects my mathematical notes, expository writing,
+                and ongoing independent study projects. Current interests include
+                linear algebra, abstract algebra, analytic number theory,
+                representation-oriented mathematics, and the historical development
+                of classical mathematical ideas.
+            </p>
+
+            <p>
+                Most documents are written in LaTeX and automatically compiled
+                through GitHub Actions.
+            </p>
+        </section>
+
+        <section id="notes">
+            <h2>Notes</h2>
+
+            <div class="card">
+                <div class="project-title">
+                    <a href="https://evaristesgun.github.io/Math.Notes.et.Problems/LinearAlgebra/main.pdf">
+                        Linear Algebra
+                    </a>
+                </div>
+
+                <div class="project-description">
+                    A self-contained set of notes on vector spaces, linear maps,
+                    dual spaces, operators, eigenvalues, Jordan theory, and related topics.
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="project-title">
+                    <a href="https://evaristesgun.github.io/Math.Notes.et.Problems/ExPair/main.pdf">
+                        ExPair
+                    </a>
+                </div>
+
+                <div class="project-description">
+                    A collection of exercises, expository discussions, and problem-oriented explorations.
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <ul>
+                <li>Construction of a GitHub-based mathematical publishing pipeline.</li>
+                <li>LaTeX-driven automated PDF deployment system.</li>
+                <li>Long-form exposition writing in algebra and number theory.</li>
+            </ul>
+        </section>
+
+        <section id="reading">
+            <h2>Current Reading</h2>
+
+            <ul>
+                <li>Linear Algebra Done Right — Sheldon Axler</li>
+                <li>Algebra — Serge Lang</li>
+                <li>Exercises in Algebra — A. I. Kostrikin</li>
+                <li>Selected texts in analytic number theory and representation theory</li>
+            </ul>
+        </section>
+
+        <section id="links">
+            <h2>Links</h2>
+
+            <ul>
+                <li>
+                    <a href="https://github.com/Evaristesgun">
+                        GitHub Profile
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://github.com/Evaristesgun/Math.Notes.et.Problems">
+                        Math.Notes.et.Problems Repository
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <footer>
+            Last updated automatically through GitHub Pages and GitHub Actions.
+        </footer>
+
+    </div>
 </body>
 </html>
